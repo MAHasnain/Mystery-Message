@@ -1,0 +1,3 @@
+interface VerificationEmailProps {
+  otp: string;
+}
