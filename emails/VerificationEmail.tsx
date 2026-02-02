@@ -1,4 +1,5 @@
 
+import { config } from '@/config/config';
 import {
   Body,
   Container,
@@ -11,18 +12,15 @@ import {
   Tailwind,
   Text,
 } from '@react-email/components';
-import config from '@tailwindcss/postcss';
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : '';
+const baseUrl = config.DOMAIN && '';
 
 export const VerificationEmail = ({
   otp
 }: VerificationEmailProps) => (
   <Html>
     <Head />
-    <Tailwind config={config}>
+    <Tailwind >
       <Body className="bg-white font-plaid">
         <Container className="bg-white border border-solid border-[#eee] rounded shadow-[rgba(20,50,70,.2)] shadow-md mt-5 max-w-[360px] mx-auto my-0 pt-[68px] px-0 pb-[130px]">
           <Img
