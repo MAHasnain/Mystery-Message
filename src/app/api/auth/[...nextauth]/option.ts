@@ -3,10 +3,11 @@ import dbConnect from "@/lib/dbConnects";
 import UserModel from "@/model/User.model";
 import bcrypt from "bcryptjs";
 import { NextAuthOptions } from "next-auth";
+import Credentials from "next-auth/providers/credentials";
 
 export const authOptions:NextAuthOptions = {
     providers: [
-        CredentialsProvider({
+        Credentials({
             id: "credentials",
             name: "Credentials",
             credentials: {
@@ -68,7 +69,3 @@ export const authOptions:NextAuthOptions = {
     secret: config.NEXTAUTH_SECRET
 
 }
-function CredentialsProvider(arg0: { id: string; name: string; credentials: { username: { label: string; type: string; }; password: { label: string; type: string; }; }; authorize(credentials: any): Promise<any>; }): import("next-auth/providers/index").Provider {
-    throw new Error("Function not implemented.");
-}
-

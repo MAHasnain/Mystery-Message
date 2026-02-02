@@ -1,6 +1,6 @@
 import z from "zod";
 
-const usernameValidation = z
+export const usernameValidation = z
  .string()
  .min(2, { message: "Username must be at least 2 characters" })
  .max(20, { message: "Username must be no more than 20" })
@@ -8,13 +8,13 @@ const usernameValidation = z
   message: "Username must not contain special character",
  });
 
-const emailValidation = z
+export const emailValidation = z
  .string()
  .regex(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, {
   message: "Invalid email address",
  });
 
-const passwordValidation = z
+export const passwordValidation = z
  .string()
  .min(6, { message: "password must be atleast 6 characters." })
  .max(20, { message: "" })
