@@ -4,5 +4,6 @@ export const config: configType = {
  MONGODB_URI: process.env.MONGODB_URI!,
  RESEND_APIKEY: process.env.RESEND_API_KEY!,
  NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET!,
- DOMAIN: process.env.DOMAIN!
+ DOMAIN: process.env.DOMAIN!,
+ OPENAI_API_KEY: process.env.OPENAI_API_KEY!
 };

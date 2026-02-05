@@ -2,5 +2,6 @@ export default interface configType {
  MONGODB_URI: string;
  RESEND_APIKEY: string;
  NEXTAUTH_SECRET: string;
- DOMAIN: string
+ DOMAIN: string;
+ OPENAI_API_KEY: string;
 }
